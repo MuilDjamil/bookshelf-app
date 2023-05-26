@@ -180,6 +180,7 @@ header nav a {
 
 .modal .confirm-action .cancel {
   background-color: #fff;
+  margin-left: 8px;
   box-shadow: 1px 0 4px rgba(0, 0, 0, .2);
 }
 
@@ -258,8 +259,9 @@ footer {
   }
 
   .book-item .book-detail {
-    width: auto;
+    width: calc(100% - 120px);
     float: left;
+    word-wrap: break-word;
   }
   
   #search-book, .new-book-form {
