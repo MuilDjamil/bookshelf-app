@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Start marking the pages of your book digitally so you never forget">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="assets/styles/style.css">
+  <title>Bookshelf App</title>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">
+        <h1>Bookshelf App</h1>
+      </div>
+      <nav>
+        <a href="#readListPage" class="nav-toggle" id="readListPage">Read List</a>
+        <a href="#doneReadPage" id="doneReadPage">Done</a>
+      </nav>
+      <div class="clear"></div>
+      
+      <div class="search-add-container">
+        <button id="add-book" tabindex="-1">+New Book</button>
+        <input type="text" id="search-book" placeholder="Search For Book">
+        <i class="fa-solid fa-magnifying-glass fa-lg" class="search-icon"></i>
+      </div>
+    </div>
+  </header>
+  
+  <main>
+    <div class="container">
+      <section class="books-container" id="books-container">
+  
+      </section>
+    </div>
+  </main>
+
+  <div class="modal-container" id="modal-container" tabindex="1">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 class="title" id="modal-title">Title</h3>
+        <div class="close-btn" id="close-btn">
+          <i class="fa-regular fa-x"></i>
+        </div>
+      </div>
+      <div class="modal-content" id="modal-content">
+        
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&#0169; Copyright (C) 2023. Created by Muil Djamil</p>
+  </footer>
+
+  <script src="assets/scripts/main.js" type="module"></script>
+</body>
+</html>
