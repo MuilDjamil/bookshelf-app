@@ -247,3 +247,22 @@ footer {
   text-align: center;
   font-size: 0.8rem;
 }
+
+@media screen and (max-width: 576px) {
+  .book-item {
+    width: 100%;
+  }
+
+  .book-item .book-placeholder {
+    width: 120px;
+  }
+
+  .book-item .book-detail {
+    width: auto;
+    float: left;
+  }
+
+  #search-book {
+    width: 10px;
+  }
+}
