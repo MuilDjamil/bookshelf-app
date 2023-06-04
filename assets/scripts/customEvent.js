@@ -30,22 +30,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchValue = searchParams.get('search') || '';
     booksContainer.innerText = '';
 
+    bookshelfData.sort((a, b) => Number(b.marked) - Number(a.marked));
     if (window.location.hash === '#readListPage') {
-      bookshelfData.sort((a, b) => Number(b.marked) - Number(a.marked)).forEach((book) => {
-        if (book.isComplete === false) {
+      const books = bookshelfData.filter((book) => book.isComplete === false);
+      if (books.length > 0) {
+        books.forEach((book) => {
           if ((book.title).toLowerCase().includes(searchValue.toLowerCase())) {
             booksContainer.appendChild(bookItem(book));
           }
-        }
-      });
+        });
+      } else {
+        booksContainer.innerHTML = `<p class="books-container-message">Belum ada buku yang ditambahkan</p>`;
+      }
     } else if (window.location.hash === '#doneReadPage') {
-      bookshelfData.sort((a, b) => Number(b.marked) - Number(a.marked)).forEach((book) => {
-        if (book.isComplete) {
+      const books = bookshelfData.filter((book) => book.isComplete);
+      if (books.length > 0) {
+        books.forEach((book) => {
           if ((book.title).toLowerCase().includes(searchValue.toLowerCase())) {
             booksContainer.appendChild(bookItem(book));
           }
-        }
-      });
+        });
+      } else {
+        booksContainer.innerHTML = `<p class="books-container-message">Belum ada buku yang ditambahkan</p>`;
+      }
     } 
   });
 });

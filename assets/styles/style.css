@@ -197,6 +197,13 @@ header nav a {
   gap: 4px;
 }
 
+.books-container-message {
+  width: 100%;
+  margin-top: 50px;
+  text-align: center;
+  display: inline-block;
+}
+
 .book-item {
   overflow: hidden;
   max-width: 400px;
