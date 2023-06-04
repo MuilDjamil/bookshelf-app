@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         });
       } else {
-        booksContainer.innerHTML = `<p class="books-container-message">Belum ada buku yang ditambahkan</p>`;
+        booksContainer.innerHTML = `<p class="books-container-message">No Books Found In the List</p>`;
       }
     } else if (window.location.hash === '#doneReadPage') {
       const books = bookshelfData.filter((book) => book.isComplete);
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         });
       } else {
-        booksContainer.innerHTML = `<p class="books-container-message">Belum ada buku yang ditambahkan</p>`;
+        booksContainer.innerHTML = `<p class="books-container-message">No Books Found In the List</p>`;
       }
     } 
   });
