@@ -28,9 +28,9 @@ function bookForm({ id = '', isComplete, title, writer, year, lastReadPage }) {
 
   pageCountlabel.innerText = 'Start Page : ';
 
-  pageCountInput.classList = 'modal__quantity-input';
+  pageCountInput.classList = 'quantity-input';
   inputGroup.classList = 'input-group';
-  form.classList = 'modal__form';
+  form.classList = 'new-book-form';
 
   pageCountContainer.append(pageCountlabel, pageCountInput);
   inputGroup.append(yearInput, pageCountContainer);
@@ -58,9 +58,8 @@ function modalConfirmAction() {
   const confirmButton = document.createElement('button');
   const cancelButton = document.createElement('button');
 
-  container.classList = 'modal__action';
-  cancelButton.classList = 'modal_action-cancel';
-  confirmButton.classList = 'button--add';
+  container.classList = 'confirm-action';
+  cancelButton.classList = 'cancel';
 
   cancelButton.innerText = 'Cancel';
   confirmButton.innerText = 'Submit';
@@ -92,17 +91,16 @@ function bookItem(book) {
   const deleteButton = document.createElement('button');
   const doneReadingButton = document.createElement('button');
 
-  container.classList = 'bookshelf__book';
-  coverImage.classList = 'bookshelf__book-placeholder';
-  bookDetail.classList = 'bookshelf__book-detail';
-  actionList.classList = 'bookshelf__book-action';
-  markedButton.classList = 'book-action--page';
-  editButton.classList = 'button--add';
-  deleteButton.classList = 'book-action--delete';
-  doneReadingButton.classList = 'book-action--done';
+  container.classList = 'book-item';
+  coverImage.classList = 'book-placeholder';
+  bookDetail.classList = 'book-detail';
+  actionList.classList = 'action-list';
+  markedButton.classList = 'page-book-button';
+  editButton.classList = 'edit-book-button';
+  deleteButton.classList = 'delete-book-button';
+  doneReadingButton.classList = 'done-reading-button';
 
   image.src = './assets/images/book-placeholder.jpg';
-  image.classList = 'bookshelf__book-img';
   editButton.tabIndex = -1;
 
   titleLabel.innerText = `Title : ${book.title}`;
@@ -177,7 +175,7 @@ function bookItem(book) {
       saveStorageData();
       document.dispatchEvent(renderItemEvent);    
     } else {
-      alert('Book Failed to Mark!');
+      alert('Buku Failed to Mark!');
     }
   })
 

@@ -14,13 +14,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const doneReadPageButton = document.getElementById('doneReadPage');
     
     if (window.location.hash === '#readListPage') {
-      readListPageButton.classList = 'header__link button--nav';
+      readListPageButton.classList = 'nav-toggle';
       doneReadPageButton.classList = '';
     } else if (window.location.hash === '#doneReadPage') {
-      doneReadPageButton.classList = 'header__link button--nav';
+      doneReadPageButton.classList = 'nav-toggle';
       readListPageButton.classList = '';
     } else {
-      readListPageButton.classList = 'header__link button--nav';
+      readListPageButton.classList = 'nav-toggle';
       doneReadPageButton.classList = '';
     }
   });
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         });
       } else {
-        booksContainer.innerHTML = `<p class="bookshelf__warning">No Books Found In the List</p>`;
+        booksContainer.innerHTML = `<p class="books-container-message">No Books Found In the List</p>`;
       }
     } else if (window.location.hash === '#doneReadPage') {
       const books = bookshelfData.filter((book) => book.isComplete);
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         });
       } else {
-        booksContainer.innerHTML = `<p class="bookshelf__warning">No Books Found In the List</p>`;
+        booksContainer.innerHTML = `<p class="books-container-message">No Books Found In the List</p>`;
       }
     } 
   });
